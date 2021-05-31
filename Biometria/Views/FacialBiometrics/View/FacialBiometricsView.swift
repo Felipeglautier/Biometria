@@ -8,7 +8,7 @@
 import UIKit
 
 protocol FacialBiometricsViewDelegate: AnyObject {
-    func selfie()
+    func buttonAction()
 }
 
 class FacialBiometricsView: UIView{
@@ -53,7 +53,7 @@ class FacialBiometricsView: UIView{
     }()
     
     @objc func recommendations(sender: UIButton!) {
-        self.delegate?.selfie()
+        self.delegate?.buttonAction()
         
     }
     

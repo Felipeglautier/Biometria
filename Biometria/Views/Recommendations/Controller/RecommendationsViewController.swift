@@ -30,7 +30,7 @@ class RecommendationsViewController: UIViewController, RecommendationsViewDelega
         )
     }
     
-    func selfie() {
+    func buttonAction() {
         let home = SelfieViewController()
         self.navigationController?.pushViewController(home, animated:true)
     }

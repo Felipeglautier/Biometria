@@ -7,7 +7,7 @@
 import UIKit
 
 protocol SucessScreenViewDelegate: AnyObject {
-    func selfie()
+    func buttonAction()
 }
 
 class SuccessScreenView: UIView {
@@ -15,21 +15,17 @@ class SuccessScreenView: UIView {
     lazy var takePicture: UIButton = {
         let button = UIButton()
         let backbutton = UIImageView()
-//        let backButton = UIBarButtonItem(title: "X", style: UIBarButtonItem.Style.plain, target: self, action: #selector(viewController))
-//            navigationItem.rightBarButtonItem = backButton
-//        let backButtonNavigation = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: navigationController, action: nil)
-//            navigationItem.leftBarButtonItem = backButtonNavigation
             backbutton.backgroundColor = .red
             button.setTitle("Fechar", for: .normal)
             button.setTitleColor(UIColor(hex: "639D31") , for: .normal)
             button.translatesAutoresizingMaskIntoConstraints = false
-            button.addTarget(nil, action: #selector(viewController), for: .touchUpInside)
+            button.addTarget(nil, action: #selector(close), for: .touchUpInside)
 
         return button
     }()
     
-    @objc func viewController(sender: UIButton!) {
-        self.delegate?.selfie()
+    @objc func close(sender: UIButton!) {
+        self.delegate?.buttonAction()
     }
     
     

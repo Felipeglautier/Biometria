@@ -30,7 +30,7 @@ class FacialBiometricsViewController : UIViewController, FacialBiometricsViewDel
         )
     }
         
-    func selfie() {
+    func buttonAction() {
         let home = RecommendationsViewController()
         self.navigationController?.pushViewController(home, animated:true)
     }

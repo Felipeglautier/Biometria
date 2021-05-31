@@ -8,6 +8,7 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    
 
     var window: UIWindow?
 
@@ -23,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = scene
         
   
-        let viewController = ViewController()
+        let viewController = SeeMainViewController()
         
         let navigationController = UINavigationController(
             rootViewController: viewController

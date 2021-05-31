@@ -30,7 +30,7 @@ class SelfieViewController: UIViewController, SelfieViewDelegate {
         )
     }
     
-    func selfie() {
+    func buttonAction() {
         let home = SucessScreenViewController()
         self.navigationController?.pushViewController(home, animated:true)
     }        
