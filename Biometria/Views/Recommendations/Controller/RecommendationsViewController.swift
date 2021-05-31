@@ -13,7 +13,6 @@ class RecommendationsViewController: UIViewController, RecommendationsViewDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupNavigationBar()
     }
     
@@ -32,9 +31,8 @@ class RecommendationsViewController: UIViewController, RecommendationsViewDelega
     }
     
     func selfie() {
-        let home = Selfie()
+        let home = SelfieViewController()
         self.navigationController?.pushViewController(home, animated:true)
     }
-        
 }
     

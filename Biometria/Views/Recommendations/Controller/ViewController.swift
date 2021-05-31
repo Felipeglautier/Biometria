@@ -19,16 +19,15 @@ class ViewController: UIViewController {
             button.layer.cornerRadius = 15
             button.translatesAutoresizingMaskIntoConstraints = false
             button.addTarget(nil, action: #selector(facialBiometrics), for: .touchUpInside)
-            
-
+        
         return button
     }()
     
-
     @objc func facialBiometrics(sender: UIButton!) {
-        let home = FacialBiometrics()
+        let home = FacialBiometricsViewController()
         self.navigationController?.pushViewController(home, animated: true)
     }
+    
     override func viewDidLoad() {
      super.viewDidLoad()
         setupNavigationBar()
@@ -48,7 +47,6 @@ class ViewController: UIViewController {
          
     func createSubviews() {
         view.addSubview(facialBiometricsButton)
-
         view.backgroundColor = .white
     }
     
@@ -61,7 +59,6 @@ class ViewController: UIViewController {
             facialBiometricsButton.heightAnchor.constraint(equalToConstant: 47),
         ])
     }
-
  }
 
 

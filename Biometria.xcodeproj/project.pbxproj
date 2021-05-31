@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		24371B4E2661807A00D1E026 /* RecommendationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24371B4D2661807A00D1E026 /* RecommendationsView.swift */; };
 		24371B5026618D8000D1E026 /* SelfieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24371B4F26618D8000D1E026 /* SelfieView.swift */; };
+		2438C2602665520A00AA960B /* FacialBiometricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2438C25F2665520A00AA960B /* FacialBiometricsView.swift */; };
+		2438C2622665528900AA960B /* FacialBiometricsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2438C2612665528900AA960B /* FacialBiometricsViewController.swift */; };
+		2438C26626655A9F00AA960B /* SuccessScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2438C26526655A9F00AA960B /* SuccessScreenView.swift */; };
 		245CDE28265EB90F00A36ECF /* SuccessScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245CDE27265EB90F00A36ECF /* SuccessScreenViewController.swift */; };
 		245CDE2A265ED64600A36ECF /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245CDE29265ED64600A36ECF /* NavigationController.swift */; };
-		2469DEFD2660493E00B40EFD /* FacialBiometrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2469DEFC2660493E00B40EFD /* FacialBiometrics.swift */; };
 		246FCD48265DA41700D63066 /* SelfieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246FCD47265DA41700D63066 /* SelfieViewController.swift */; };
 		24A6F88726585F8E008533F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A6F88626585F8E008533F6 /* AppDelegate.swift */; };
 		24A6F88926585F8E008533F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A6F88826585F8E008533F6 /* SceneDelegate.swift */; };
@@ -26,10 +28,12 @@
 /* Begin PBXFileReference section */
 		24371B4D2661807A00D1E026 /* RecommendationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecommendationsView.swift; path = ../../../../../../RecommendationsView.swift; sourceTree = "<group>"; };
 		24371B4F26618D8000D1E026 /* SelfieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelfieView.swift; path = ../../../../../../SelfieView.swift; sourceTree = "<group>"; };
+		2438C25F2665520A00AA960B /* FacialBiometricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacialBiometricsView.swift; sourceTree = "<group>"; };
+		2438C2612665528900AA960B /* FacialBiometricsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacialBiometricsViewController.swift; sourceTree = "<group>"; };
+		2438C26526655A9F00AA960B /* SuccessScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessScreenView.swift; sourceTree = "<group>"; };
 		245CDE27265EB90F00A36ECF /* SuccessScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessScreenViewController.swift; sourceTree = "<group>"; };
 		245CDE29265ED64600A36ECF /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
-		2469DEFC2660493E00B40EFD /* FacialBiometrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacialBiometrics.swift; sourceTree = "<group>"; };
-		246FCD47265DA41700D63066 /* SelfieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfieViewController.swift; sourceTree = "<group>"; };
+		246FCD47265DA41700D63066 /* SelfieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelfieViewController.swift; path = ../../SelfieViewController.swift; sourceTree = "<group>"; };
 		24A6F88326585F8E008533F6 /* Biometria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Biometria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A6F88626585F8E008533F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24A6F88826585F8E008533F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,10 @@
 			isa = PBXGroup;
 			children = (
 				24A6F89C26585FC8008533F6 /* RecommendationsViewController.swift */,
+				246FCD47265DA41700D63066 /* SelfieViewController.swift */,
+				245CDE27265EB90F00A36ECF /* SuccessScreenViewController.swift */,
+				2438C2612665528900AA960B /* FacialBiometricsViewController.swift */,
+				24A6F88A26585F8E008533F6 /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -75,6 +83,8 @@
 			children = (
 				24371B4D2661807A00D1E026 /* RecommendationsView.swift */,
 				24371B4F26618D8000D1E026 /* SelfieView.swift */,
+				2438C25F2665520A00AA960B /* FacialBiometricsView.swift */,
+				2438C26526655A9F00AA960B /* SuccessScreenView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -83,9 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				24371B4A2661804000D1E026 /* Recommendations */,
-				246FCD47265DA41700D63066 /* SelfieViewController.swift */,
-				245CDE27265EB90F00A36ECF /* SuccessScreenViewController.swift */,
-				2469DEFC2660493E00B40EFD /* FacialBiometrics.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -113,7 +120,6 @@
 				24A6F8A226586012008533F6 /* Extension */,
 				24A6F88626585F8E008533F6 /* AppDelegate.swift */,
 				24A6F88826585F8E008533F6 /* SceneDelegate.swift */,
-				24A6F88A26585F8E008533F6 /* ViewController.swift */,
 				24A6F88C26585F8E008533F6 /* Main.storyboard */,
 				24A6F88F26585F8F008533F6 /* Assets.xcassets */,
 				24A6F89126585F8F008533F6 /* LaunchScreen.storyboard */,
@@ -201,15 +207,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2469DEFD2660493E00B40EFD /* FacialBiometrics.swift in Sources */,
 				24A6F88B26585F8E008533F6 /* ViewController.swift in Sources */,
+				2438C26626655A9F00AA960B /* SuccessScreenView.swift in Sources */,
 				245CDE2A265ED64600A36ECF /* NavigationController.swift in Sources */,
 				24A6F8A426586012008533F6 /* ExtensionUIColor.swift in Sources */,
 				24A6F88726585F8E008533F6 /* AppDelegate.swift in Sources */,
 				24371B5026618D8000D1E026 /* SelfieView.swift in Sources */,
 				24A6F88926585F8E008533F6 /* SceneDelegate.swift in Sources */,
+				2438C2622665528900AA960B /* FacialBiometricsViewController.swift in Sources */,
 				245CDE28265EB90F00A36ECF /* SuccessScreenViewController.swift in Sources */,
 				24A6F89D26585FC8008533F6 /* RecommendationsViewController.swift in Sources */,
+				2438C2602665520A00AA960B /* FacialBiometricsView.swift in Sources */,
 				246FCD48265DA41700D63066 /* SelfieViewController.swift in Sources */,
 				24371B4E2661807A00D1E026 /* RecommendationsView.swift in Sources */,
 			);

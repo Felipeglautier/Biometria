@@ -1,20 +1,24 @@
 //
-//  SuccessScreen .swift
+//  SuccessScreenView.swift
 //  Biometria
 //
-//  Created by Felipe Glautier  on 26/05/21.
+//  Created by Felipe Glautier  on 31/05/21.
 //
 import UIKit
 
-class SuccessScreen: UIViewController {
+protocol SucessScreenViewDelegate: AnyObject {
+    func selfie()
+}
+
+class SuccessScreenView: UIView {
 
     lazy var takePicture: UIButton = {
         let button = UIButton()
         let backbutton = UIImageView()
-        let backButton = UIBarButtonItem(title: "X", style: UIBarButtonItem.Style.plain, target: self, action: #selector(viewController))
-            navigationItem.rightBarButtonItem = backButton
-        let backButtonNavigation = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: navigationController, action: nil)
-        navigationItem.leftBarButtonItem = backButtonNavigation
+//        let backButton = UIBarButtonItem(title: "X", style: UIBarButtonItem.Style.plain, target: self, action: #selector(viewController))
+//            navigationItem.rightBarButtonItem = backButton
+//        let backButtonNavigation = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: navigationController, action: nil)
+//            navigationItem.leftBarButtonItem = backButtonNavigation
             backbutton.backgroundColor = .red
             button.setTitle("Fechar", for: .normal)
             button.setTitleColor(UIColor(hex: "639D31") , for: .normal)
@@ -23,6 +27,11 @@ class SuccessScreen: UIViewController {
 
         return button
     }()
+    
+    @objc func viewController(sender: UIButton!) {
+        self.delegate?.selfie()
+    }
+    
     
     lazy var cadrastoImage: UIImageView = {
         let imageView = UIImageView(image: #imageLiteral(resourceName: "cadrastro"))
@@ -37,24 +46,26 @@ class SuccessScreen: UIViewController {
 
         return imageView
     }()
-    
-    @objc func viewController(sender: UIButton!) {
-        let home = ViewController()
-        self.navigationController?.pushViewController(home, animated: true)
-    }
 
-    override func viewDidLoad() {
-     super.viewDidLoad()
-        
+    weak var delegate: SucessScreenViewDelegate?
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         createSubviews()
         setupConstraints()
-     }
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        createSubviews()
+        setupConstraints()
+    }
 
-        func createSubviews() {
-            view.addSubview(cadrastoImage)
-            view.addSubview(takePicture)
-            view.addSubview(vector)
-            view.backgroundColor = .white
+   func createSubviews() {
+           addSubview(cadrastoImage)
+            addSubview(takePicture)
+            addSubview(vector)
+            backgroundColor = .white
 }
         
         func setupConstraints() {
@@ -62,17 +73,17 @@ class SuccessScreen: UIViewController {
 
                 cadrastoImage.bottomAnchor.constraint(equalTo: takePicture.bottomAnchor, constant: -200),
                 cadrastoImage.widthAnchor.constraint(equalToConstant: 280),
-                cadrastoImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 27),
+                cadrastoImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 27),
                 cadrastoImage.heightAnchor.constraint(equalToConstant: 144),
                 
                 vector.bottomAnchor.constraint(equalTo: cadrastoImage.bottomAnchor, constant: -180),
                 vector.widthAnchor.constraint(equalToConstant: 78),
-                vector.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 27),
+                vector.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 27),
                 vector.heightAnchor.constraint(equalToConstant: 72),
                 
-                takePicture.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30),
+                takePicture.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -30),
                 takePicture.widthAnchor.constraint(equalToConstant: 206),
-                takePicture.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                takePicture.centerXAnchor.constraint(equalTo: centerXAnchor),
                 takePicture.heightAnchor.constraint(equalToConstant: 48),
      ])
     }

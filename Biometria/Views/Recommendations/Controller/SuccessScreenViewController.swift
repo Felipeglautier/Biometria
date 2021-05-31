@@ -1,18 +1,18 @@
 //
-//  Selfie.swift
+//  SuccessScreen .swift
 //  Biometria
 //
-//  Created by Felipe Glautier  on 25/05/21.
+//  Created by Felipe Glautier  on 26/05/21.
 //
-
 import UIKit
 
-class SelfieViewController: UIViewController, SelfieViewDelegate {
+class SucessScreenViewController: UIViewController, SucessScreenViewDelegate {
   
-    let shareView = SelfieView()
+    let shareView = SuccessScreenView()
+
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()        
         setupNavigationBar()
     }
     
@@ -26,13 +26,15 @@ class SelfieViewController: UIViewController, SelfieViewDelegate {
         configureNavigationBar(
                                backgoundColor: UIColor(hex: "#ffffff"),
                                tintColor: UIColor(hex: "#639D31"),
-                               title: "Tire a sua foto"
+                               title: ""
+            
+            
         )
     }
     
     func selfie() {
-        let home = SucessScreenViewController()
+        let home = ViewController()
         self.navigationController?.pushViewController(home, animated:true)
-    }        
+    }
 }
     
