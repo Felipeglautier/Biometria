@@ -14,8 +14,6 @@ class SuccessScreenView: UIView {
 
     lazy var takePicture: UIButton = {
         let button = UIButton()
-        let backbutton = UIImageView()
-            backbutton.backgroundColor = .red
             button.setTitle("Fechar", for: .normal)
             button.setTitleColor(UIColor(hex: "639D31") , for: .normal)
             button.translatesAutoresizingMaskIntoConstraints = false
