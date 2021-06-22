@@ -21,7 +21,7 @@ class FacialBiometricsView: UIView{
             label.translatesAutoresizingMaskIntoConstraints = false
             label.font = UIFont.systemFont(ofSize: 17, weight: .medium)
             label.textColor = UIColor(hex: "#505152")
-            label.text = " Agora, Você pode cadrastar a sua biometria facial."
+            label.text = " Agora, Você pode cadastar a sua biometria facial."
 
         return label
     }()

@@ -44,8 +44,8 @@ class SeeMainView: UIView {
     }
 
    func createSubviews() {
-       addSubview(facialBiometricsButton)
-    backgroundColor = .white
+        addSubview(facialBiometricsButton)
+        backgroundColor = .white
     }
     
     func setupConstraints() {
